@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author zha
- * 堆排序，时间的复杂度是O（nlogn）
+ * 绠楁硶鐨勫鏉傚害涓篛(nlogn)
  */
 public class HeapSort {
 
@@ -16,7 +16,6 @@ public class HeapSort {
 	}
 
 	private static void heapSort(int[] array, int from, int to) {
-		// 首先是建立一个堆
 		buildHeap(array,from,to);
 		int length = to - from +1;
 		swap(array,from,to);
@@ -30,7 +29,6 @@ public class HeapSort {
 		
 	}
 
-	//建立一个堆，采用的是递归的方式，每次都感觉比较的奇妙的感觉
 	private static void buildHeap(int[] array, int from, int to) {
 		int length = to - from +1;
 		int mid = from + (length >> 1);
@@ -39,7 +37,6 @@ public class HeapSort {
 		}
 	}
 
-	//保证数组i为根的子树成为最大堆
 	private static void MAXHeap(int[] array, int from, int to, int index) {
 		int left = left(index);
 		int right = right(index);
@@ -67,12 +64,10 @@ public class HeapSort {
 		
 	}
 
-	//左子树的下标
 	private static int left(int i){
 		return 2*(i+1)-1;
 	}
 	
-	//右子树的下标
 	private static int right(int i){
 		return 2*(i+1);
 	}
