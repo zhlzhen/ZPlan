@@ -1,7 +1,6 @@
 package alg;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * @author zha 插入排序，基础的算法 算法复杂度为O(n2)

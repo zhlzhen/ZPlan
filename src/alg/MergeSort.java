@@ -34,6 +34,7 @@ public class MergeSort {
 
 	/**
 	 * 合并排序中合并的两端都是有序的,哨兵牌的使用
+	 * 哨兵的作用比较的不太好
 	 * */
 	private static void merge(int[] array, int start, int mid, int end) {
 		// 创建两个变量，用来存储中间的变量
