@@ -1,22 +1,38 @@
 package regularExpression.current;
 
+import java.io.FileReader;
+import java.util.Scanner;
+
 public class Snippet {
 	
-	public static void main(String[] args){
-		if("testaa".trim() == "testaa".trim()){
-			System.out.println("que ding wei yi");
-		}
-		
-		String s1 = "abc"+"def";
-		String s2 = new String(s1);
-		if(s1 == s2) {
-			System.out.println("d");
-	}else if(s1.equals(s2)) {
-			System.out.println("ddd");
-		}else {
-			System.out.println("hh");
-	}
+	
 
-	}
+	public static void main(String[] args) {
+	        String accountNum, password, give;  
+	        int count=0, menuChoice,size=0; 
+	        String[] validAccounts=null; 
+	
+	        //gets the data from the file and stores into an array
+	        try {
+	            Scanner file= new Scanner (new FileReader("H:\\ATMdata.txt.txt"));
+	
+	            //counts the lines in the text file
+	
+	            while (file.hasNextLine()) {
+	                size++;
+	                String theLine = file.nextLine();
+	            }
+	
+	            validAccounts= new String[size];
+	
+	            for ( int countFile=0; count==size; countFile++) {
+	                validAccounts[countFile]= file.nextLine();
+	            }
+	        }
+	        catch(Exception e) {
+	        	e.printStackTrace();
+	            System.out.println("Error processing file.");
+	        }
 }
+	}
 
